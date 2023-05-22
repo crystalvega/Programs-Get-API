@@ -3,18 +3,21 @@ fetch('data.txt')
   .then(response => response.text())
   .then(textData => {
     try {
-      // Разбор строк
-      var jsonData = {};
+      // Разбиваем текст на строки
       var lines = textData.split('\n');
-      for (var i = 0; i < lines.length; i++) {
-        var line = lines[i].trim();
-        if (line !== '') {
-          var parts = line.split('=');
+
+      // Объект для хранения данных
+      var jsonData = {};
+
+      // Обработка каждой строки
+      lines.forEach(line => {
+        var parts = line.trim().split('=');
+        if (parts.length === 2) {
           var key = parts[0].trim();
           var value = parts[1].trim();
           jsonData[key] = value;
         }
-      }
+      });
 
       // Получаем ссылку на элемент вывода
       var outputElement = document.getElementById('output');
