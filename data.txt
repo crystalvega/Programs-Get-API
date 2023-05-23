@@ -2,3 +2,5 @@ app1 = https
 image_app1 = https
 app2 = http
 image_app2 = http
+app3 = htt
+image_app3 = htt
