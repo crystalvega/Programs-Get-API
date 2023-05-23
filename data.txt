@@ -1,4 +1,4 @@
-data = txt
-data = txt1
-data1 = txt2
-data1 = txt3
+app1 = https
+image_app1 = https
+app2 = http
+image_app2 = http
