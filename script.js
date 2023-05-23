@@ -19,6 +19,7 @@ fetch('data.txt')
         }
       });
 
+
       // Получаем ссылку на элемент вывода
       var outputElement = document.getElementById('output');
 
